@@ -6,6 +6,7 @@ var server = http.createServer(function (req, res) {
     res.end('Hello Http');
 });
 */
+
 function start(route, handle) {
     function onRequest(request, response) {
         var pathname = url.parse(request.url).pathname;
@@ -30,4 +31,5 @@ exports.start = start;
 exports.info = function () {
     console.log("Http server! port 8081")
 };
+
 //server.listen(8081);
